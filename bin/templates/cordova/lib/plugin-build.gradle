@@ -42,6 +42,7 @@ dependencies {
 }
 
 android {
+    namespace 'org.apache.cordova'
     compileSdkVersion cdvCompileSdkVersion
     buildToolsVersion cdvBuildToolsVersion
 

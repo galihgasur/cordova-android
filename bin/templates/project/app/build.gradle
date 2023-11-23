@@ -93,6 +93,10 @@ ext {
     apply from: '../CordovaLib/cordova.gradle'
 
     // The value for android.compileSdkVersion.
+    if (!project.hasProperty('cdvAppNameSpace')) {
+        cdvAppNameSpace = null;
+    }
+    // The value for android.compileSdkVersion.
     if (!project.hasProperty('cdvCompileSdkVersion')) {
         cdvCompileSdkVersion = null;
     }
@@ -226,6 +230,7 @@ task cdvPrintProps {
 }
 
 android {
+    namespace 'com.klasmart.platform.student'
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
