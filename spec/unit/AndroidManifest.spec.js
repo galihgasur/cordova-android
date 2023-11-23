@@ -39,6 +39,7 @@ describe('AndroidManifest', () => {
     <application android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name"
         android:supportsRtl="true" android:debuggable="true">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:exported="true"
             android:label="@string/activity_name" android:launchMode="${ACTIVITY_LAUNCH_MODE}"
             android:name="${ACTIVITY_NAME}" android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
             android:windowSoftInputMode="adjustResize" android:screenOrientation="${ACTIVITY_ORIENTATION}">
