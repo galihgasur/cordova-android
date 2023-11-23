@@ -354,6 +354,8 @@ dependencies {
     releaseCompile(project(path: ":CordovaLib", configuration: "release"))
     // SUB-PROJECT DEPENDENCIES END
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
 }
 
 def promptForReleaseKeyPassword() {
