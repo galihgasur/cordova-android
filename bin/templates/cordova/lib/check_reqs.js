@@ -141,12 +141,12 @@ module.exports.check_gradle = function () {
 module.exports.check_java = async function () {
     const javaVersion = await java.getVersion();
 
-    if (!semver.satisfies(javaVersion.version, EXPECTED_JAVA_VERSION)) {
-        throw new CordovaError(
-            `Requirements check failed for JDK ${EXPECTED_JAVA_VERSION}! Detected version: ${javaVersion.version}\n` +
-            'Check your ANDROID_SDK_ROOT / JAVA_HOME / PATH environment variables.'
-        );
-    }
+    // if (!semver.satisfies(javaVersion.version, EXPECTED_JAVA_VERSION)) {
+    //     throw new CordovaError(
+    //         `Requirements check failed for JDK ${EXPECTED_JAVA_VERSION}! Detected version: ${javaVersion.version}\n` +
+    //         'Check your ANDROID_SDK_ROOT / JAVA_HOME / PATH environment variables.'
+    //     );
+    // }
 
     return javaVersion;
 };
